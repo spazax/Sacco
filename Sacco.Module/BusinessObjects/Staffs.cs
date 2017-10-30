@@ -28,13 +28,13 @@ namespace Sacco.Module.BusinessObjects
             set { SetPropertyValue("FirstName", ref _firstName, value); }
         }
 
-         private string LastName
+   public  string LastName
         {
             get { return _lastName;}
             set { SetPropertyValue("LastName", ref _lastName, value); }
         }
 
-        private string MiddleName
+        public string MiddleName
         {
             get { return _middleName; }
             set { SetPropertyValue("MiddleName", ref _middleName, value); }
