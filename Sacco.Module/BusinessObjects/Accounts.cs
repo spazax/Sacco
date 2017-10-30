@@ -15,7 +15,7 @@ using DevExpress.Persistent.Validation;
 namespace Sacco.Module.BusinessObjects
 {
     [DefaultClassOptions]
-       public class Accounts : BaseObject
+       public class Accounts : XPObject
     {
         private string _accountName;
 
@@ -23,6 +23,19 @@ namespace Sacco.Module.BusinessObjects
         {
             get { return _accountName; }
             set { SetPropertyValue("AccountName", ref _accountName, value); }
+        }
+        private int _AccNo;
+
+        public int AccountNo
+        {
+            get { return _AccNo; }
+            set { SetPropertyValue("AccountNo", ref _AccNo, value); }
+
+        }
+
+        private Customers customers;
+        public Customers Customers { get { return customers; }
+            set { SetPropertyValue("Customers", ref customers, value); }
         }
         public Accounts(Session session)
             : base(session)
