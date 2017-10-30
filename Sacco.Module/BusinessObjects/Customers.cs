@@ -20,6 +20,12 @@ namespace Sacco.Module.BusinessObjects
         private string _firstname;
         private string _lastname;
         private string _middlename;
+        [PersistentAlias(@"[FirstName] +'  '+ [MiddleName]+'  '+[LastName]")]
+
+        public string FullName
+        {
+            get { return (string)(EvaluateAlias("FullName")); }
+        }
 
         public string FirstName
         {
@@ -41,6 +47,33 @@ namespace Sacco.Module.BusinessObjects
             set { SetPropertyValue("MiddleName", ref _middlename, value); }
         }
 
+        private DateTime _BirthDate;
+
+        public DateTime BirthDate
+        {
+            get { return _BirthDate;}
+            set { SetPropertyValue("BirthDate", ref _BirthDate, value); }
+        }
+
+        [ImageEditor(ListViewImageEditorCustomHeight = 75, DetailViewImageEditorFixedHeight = 150)]
+        public byte[] Photo { get; set; }
+        [Association("Customers-Address")]
+        public XPCollection<Address> Address
+        {
+            get
+            {
+                return GetCollection<Address>("Address");
+            }
+        }
+
+        [Association("Customers-LoanContracts")]
+        public XPCollection<LoanContracts> LoanContrats
+        {
+            get
+            {
+                return GetCollection<LoanContracts>("LoanContracts");
+            }
+        }
         public Customers(Session session)
             : base(session)
         {

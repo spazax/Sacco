@@ -124,7 +124,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessObjects\Accounts.cs" />
+    <Compile Include="BusinessObjects\Address.cs" />
+    <Compile Include="BusinessObjects\Approver.cs" />
     <Compile Include="BusinessObjects\Customers.cs" />
+    <Compile Include="BusinessObjects\Loan.cs" />
+    <Compile Include="BusinessObjects\LoanContracts.cs" />
+    <Compile Include="BusinessObjects\LoanType.cs" />
+    <Compile Include="BusinessObjects\PaymentMethods.cs" />
+    <Compile Include="BusinessObjects\SaccoMember.cs" />
     <Compile Include="BusinessObjects\Staffs.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">

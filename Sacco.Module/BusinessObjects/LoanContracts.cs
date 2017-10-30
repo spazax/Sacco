@@ -15,39 +15,32 @@ using DevExpress.Persistent.Validation;
 namespace Sacco.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    
-    public class Staffs : XPObject
+        public class LoanContracts : XPObject
     {
-        private string _firstName;
-        private string _lastName;
-        private string _middleName;
+        private DateTime _contractStartDate;
 
-        public string FirstName
+        public DateTime LoanStartDate
         {
-            get { return _firstName; }
-            set { SetPropertyValue("FirstName", ref _firstName, value); }
+            get { return _contractStartDate; }
+            set { SetPropertyValue("ContractStartDate", ref _contractStartDate, value); }
         }
 
-   public  string LastName
+        private Customers customers;
+        [Association("Customers-LoanContracts")]
+        public Customers Customers
         {
-            get { return _lastName;}
-            set { SetPropertyValue("LastName", ref _lastName, value); }
+            get { return customers; }
+            set { SetPropertyValue("Customers", ref customers, value); }
         }
-
-        public string MiddleName
-        {
-            get { return _middleName; }
-            set { SetPropertyValue("MiddleName", ref _middleName, value); }
-        }
-        public Staffs(Session session)
+        public LoanContracts(Session session)
             : base(session)
         {
         }
         public override void AfterConstruction()
         {
             base.AfterConstruction();
-          
+            
         }
-       
+        
     }
 }
