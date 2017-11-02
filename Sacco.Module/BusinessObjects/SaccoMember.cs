@@ -46,7 +46,17 @@ namespace Sacco.Module.BusinessObjects
         {
             get { return _membershipNo; }
             set { SetPropertyValue("MembershipNo", ref _membershipNo, value); }
+
         }
+
+        private Loan _loan;
+        [Association("Loan-SaccoMember")]
+        public Loan loan
+        {
+            get { return _loan; }
+            set { SetPropertyValue("Loan", ref _loan, value); }
+        }
+
         public SaccoMember(Session session)
             : base(session)
         {

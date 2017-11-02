@@ -37,6 +37,17 @@ namespace Sacco.Module.BusinessObjects
         public Customers Customers { get { return customers; }
             set { SetPropertyValue("Customers", ref customers, value); }
         }
+
+        private LoanType _loanType;
+
+        public LoanType LoanType
+        {
+            get { return _loanType;}
+            set { SetPropertyValue("LoanType", ref _loanType, value); }
+        }
+
+
+
         public Accounts(Session session)
             : base(session)
         {

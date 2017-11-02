@@ -42,6 +42,27 @@ namespace Sacco.Module.BusinessObjects
             set { SetPropertyValue("LoanType", ref loanType, value); }
         }
 
+        private decimal _monthlyRepaymentValue;
+        public decimal MonthlyRepaymentValue
+        {
+            get
+            {
+                return _monthlyRepaymentValue;
+            }
+            set
+            {
+                SetPropertyValue("MonthlyRepaymentValue", ref _monthlyRepaymentValue, value);
+            }
+        }
+        [Association("Loan-SaccoMember")]
+        public XPCollection<SaccoMember> SaccoMember
+        {
+            get
+            {
+                return GetCollection<SaccoMember>("SaccoMember");
+            }
+        }
+
         public Loan(Session session)
             : base(session)
         {
