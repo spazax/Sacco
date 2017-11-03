@@ -70,7 +70,11 @@ namespace Sacco.Module.BusinessObjects
                 return GetCollection<LoanGuaranter>("LoanGuaranter");
             }
         }
-
+        [Association("Loan-LoanOverpayment")]
+        public XPCollection<LoanOverpayment> LoanOverpayment
+        {
+            get { return GetCollection<LoanOverpayment>("LoanOverpayment"); }
+        }
 
         public Loan(Session session)
             : base(session)
