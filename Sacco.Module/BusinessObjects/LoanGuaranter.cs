@@ -20,6 +20,13 @@ namespace Sacco.Module.BusinessObjects
     {
         private Loan _loan;
         [Association("Loan-LoanGuaranter")]
+        private SaccoMember _saccoMember;
+        [Association("SaccoMember-LoanGuaranter")]
+        public SaccoMember SaccoMember
+        {
+            get { return _saccoMember; }
+            set { SetPropertyValue("SaccoMember", ref _saccoMember, value); }
+        }
         public Loan Loan
         {
             get { return _loan; }
