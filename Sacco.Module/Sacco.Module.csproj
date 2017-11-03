@@ -129,6 +129,7 @@
     <Compile Include="BusinessObjects\Customers.cs" />
     <Compile Include="BusinessObjects\Loan.cs" />
     <Compile Include="BusinessObjects\LoanContracts.cs" />
+    <Compile Include="BusinessObjects\LoanGuaranter.cs" />
     <Compile Include="BusinessObjects\LoanType.cs" />
     <Compile Include="BusinessObjects\PaymentMethods.cs" />
     <Compile Include="BusinessObjects\SaccoMember.cs" />

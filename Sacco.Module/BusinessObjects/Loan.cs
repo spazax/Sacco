@@ -62,6 +62,15 @@ namespace Sacco.Module.BusinessObjects
                 return GetCollection<SaccoMember>("SaccoMember");
             }
         }
+        [Association("Loan-LoanGuaranter")]
+        public XPCollection<LoanGuaranter> LoanGuaranter
+        {
+            get
+            {
+                return GetCollection<LoanGuaranter>("LoanGuaranter");
+            }
+        }
+
 
         public Loan(Session session)
             : base(session)
