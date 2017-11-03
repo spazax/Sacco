@@ -67,7 +67,7 @@ namespace Sacco.Module.BusinessObjects
         }
 
         [Association("Customers-LoanContracts")]
-        public XPCollection<LoanContracts> LoanContrats
+        public XPCollection<LoanContracts> LoanContracts
         {
             get
             {

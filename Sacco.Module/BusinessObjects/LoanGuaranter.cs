@@ -16,10 +16,17 @@ namespace Sacco.Module.BusinessObjects
 {
     [DefaultClassOptions]
    
-    public class LoanGuaranter : BaseObject
+    public class LoanGuaranter : XPObject
     {
         private Loan _loan;
+
         [Association("Loan-LoanGuaranter")]
+        public Loan Loan
+        {
+            get { return _loan; }
+            set { SetPropertyValue("Loan", ref _loan, value); }
+        }
+
         private SaccoMember _saccoMember;
         [Association("SaccoMember-LoanGuaranter")]
         public SaccoMember SaccoMember
@@ -27,11 +34,7 @@ namespace Sacco.Module.BusinessObjects
             get { return _saccoMember; }
             set { SetPropertyValue("SaccoMember", ref _saccoMember, value); }
         }
-        public Loan Loan
-        {
-            get { return _loan; }
-            set { SetPropertyValue("Loan", ref _loan, value); }
-        }
+
         public LoanGuaranter(Session session)
             : base(session)
         {
