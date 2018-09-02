@@ -17,34 +17,40 @@ namespace Sacco.Module.BusinessObjects
     [DefaultClassOptions]
        public class Accounts : XPObject
     {
-        private string _accountName;
+        //[PersistentAlias(@"[Customers] +'  '+ [AccountNo]")]
 
-        public string AccountName
-        {
-            get { return _accountName; }
-            set { SetPropertyValue("AccountName", ref _accountName, value); }
-        }
-        private int _AccNo;
+        //public string AccountDetails
+        //{
+        //    get { return (string)(EvaluateAlias("AccountDetails")); }
+        //}
+        //private string _accountName;
 
-        public int AccountNo
-        {
-            get { return _AccNo; }
-            set { SetPropertyValue("AccountNo", ref _AccNo, value); }
+        //public string AccountName
+        //{
+        //    get { return _accountName; }
+        //    set { SetPropertyValue("AccountName", ref _accountName, value); }
+        //}
+        //private int _AccNo;
 
-        }
+        //public int AccountNo
+        //{
+        //    get { return _AccNo; }
+        //    set { SetPropertyValue("AccountNo", ref _AccNo, value); }
 
-        private Customers customers;
-        public Customers Customers { get { return customers; }
-            set { SetPropertyValue("Customers", ref customers, value); }
-        }
+        //}
 
-        private LoanType _loanType;
+        //private Customers customers;
+        //public Customers Customers { get { return customers; }
+        //    set { SetPropertyValue("Customers", ref customers, value); }
+        //}
 
-        public LoanType LoanType
-        {
-            get { return _loanType;}
-            set { SetPropertyValue("LoanType", ref _loanType, value); }
-        }
+        //private LoanType _loanType;
+
+        //public LoanType LoanType
+        //{
+        //    get { return _loanType;}
+        //    set { SetPropertyValue("LoanType", ref _loanType, value); }
+        //}
 
 
 

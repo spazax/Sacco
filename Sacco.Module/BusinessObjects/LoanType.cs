@@ -20,37 +20,37 @@ namespace Sacco.Module.BusinessObjects
     
     public class LoanType : BaseObject
     {
-        private string _name;
-        private decimal _maximumAmmount;
-        private decimal _interestRate;
-        private int _repaymentPeriod;
+        //private string _name;
+        //private decimal _maximumAmmount;
+        //private decimal _interestRate;
+        //private int _repaymentPeriod;
 
-        public string Name
-        {
-            get { return _name; }
-            set { SetPropertyValue("Name", ref _name, value); }
-        }
+        //public string Name
+        //{
+        //    get { return _name; }
+        //    set { SetPropertyValue("Name", ref _name, value); }
+        //}
 
-        public decimal MaximumAmmount
-        {
-            get { return _maximumAmmount; }
-            set { SetPropertyValue("MaximumAmmount", ref _maximumAmmount, value); }
-        }
+        //public decimal MaximumAmmount
+        //{
+        //    get { return _maximumAmmount; }
+        //    set { SetPropertyValue("MaximumAmmount", ref _maximumAmmount, value); }
+        //}
 
-        public decimal InterestRate
-        {
-            get { return _interestRate;}
-            set { SetPropertyValue("InterestRate", ref _interestRate, value); }
-        }
+        //public decimal InterestRate
+        //{
+        //    get { return _interestRate;}
+        //    set { SetPropertyValue("InterestRate", ref _interestRate, value); }
+        //}
 
-        public int RepaymentPeriod
-        {
-            get { return _repaymentPeriod; }
-            set { SetPropertyValue("RepaymentPeriod", ref _repaymentPeriod, value); }
+        //public int RepaymentPeriod
+        //{
+        //    get { return _repaymentPeriod; }
+        //    set { SetPropertyValue("RepaymentPeriod", ref _repaymentPeriod, value); }
 
-        }
-        [Association]
-        public XPCollection<Loan> Loans => GetCollection<Loan>("Loans");
+        //}
+        //[Association]
+        //public XPCollection<Loan> Loans => GetCollection<Loan>("Loans");
         public LoanType(Session session)
             : base(session)
         {

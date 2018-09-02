@@ -20,21 +20,21 @@ namespace Sacco.Module.BusinessObjects
     public class PaymentMethods : BaseObject
     {
 
-        private string _name;
+        //private string _name;
 
-        public string Name
-        {
-            get { return _name; }
-            set { SetPropertyValue("Name", ref _name, value); }
-        }
+        //public string Name
+        //{
+        //    get { return _name; }
+        //    set { SetPropertyValue("Name", ref _name, value); }
+        //}
 
-        private string _description;
-        [Size(1000)]
-        public string Description
-        {
-            get { return _description; }
-            set { SetPropertyValue("Desription", ref _description, value); }
-        }
+        //private string _description;
+        //[Size(1000)]
+        //public string Description
+        //{
+        //    get { return _description; }
+        //    set { SetPropertyValue("Desription", ref _description, value); }
+        //}
         public PaymentMethods(Session session)
             : base(session)
         {

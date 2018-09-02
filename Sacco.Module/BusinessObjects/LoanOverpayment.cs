@@ -19,13 +19,13 @@ namespace Sacco.Module.BusinessObjects
     public class LoanOverpayment : BaseObject
     {
 
-        private Loan _loan;
-        [Association("Loan-LoanOverpayment")]
-        public Loan loan
-        {
-            get { return _loan; }
-            set { SetPropertyValue("Loan", ref _loan, value); }
-        }
+        //private Loan _loan;
+        //[Association("Loan-LoanOverpayment")]
+        //public Loan loan
+        //{
+        //    get { return _loan; }
+        //    set { SetPropertyValue("Loan", ref _loan, value); }
+        //}
         public LoanOverpayment(Session session)
             : base(session)
         {

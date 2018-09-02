@@ -16,7 +16,7 @@ namespace Sacco.Module.BusinessObjects
 {
     [DefaultClassOptions]
    
-    public class Approver : XPObject
+    public class Approver :Person
     {
         private string _approver;
 

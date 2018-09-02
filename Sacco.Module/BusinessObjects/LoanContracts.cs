@@ -17,21 +17,21 @@ namespace Sacco.Module.BusinessObjects
     [DefaultClassOptions]
         public class LoanContracts : XPObject
     {
-        private DateTime _contractStartDate;
+        //private DateTime _contractStartDate;
 
-        public DateTime LoanStartDate
-        {
-            get { return _contractStartDate; }
-            set { SetPropertyValue("ContractStartDate", ref _contractStartDate, value); }
-        }
+        //public DateTime LoanStartDate
+        //{
+        //    get { return _contractStartDate; }
+        //    set { SetPropertyValue("ContractStartDate", ref _contractStartDate, value); }
+        //}
 
-        private Customers customers;
-        [Association("Customers-LoanContracts")]
-        public Customers Customers
-        {
-            get { return customers; }
-            set { SetPropertyValue("Customers", ref customers, value); }
-        }
+        //private Customers customers;
+        //[Association("Customers-LoanContracts")]
+        //public Customers Customers
+        //{
+        //    get { return customers; }
+        //    set { SetPropertyValue("Customers", ref customers, value); }
+        //}
         public LoanContracts(Session session)
             : base(session)
         {

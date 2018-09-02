@@ -15,65 +15,79 @@ using DevExpress.Persistent.Validation;
 namespace Sacco.Module.BusinessObjects
 {
     [DefaultClassOptions]
-      public class Customers :XPObject
+      public class Customers :Person
     {
-        private string _firstname;
-        private string _lastname;
-        private string _middlename;
-        [PersistentAlias(@"[FirstName] +'  '+ [MiddleName]+'  '+[LastName]")]
+        //private string _firstname;
+        //private string _lastname;
+        //private string _middlename;
+        //[PersistentAlias(@"[FirstName] +'  '+ [MiddleName]+'  '+[LastName]")]
 
-        public string FullName
-        {
-            get { return (string)(EvaluateAlias("FullName")); }
-        }
+        //public string FullName
+        //{
+        //    get { return (string)(EvaluateAlias("FullName")); }
+        //}
 
-        public string FirstName
-        {
-            get { return _firstname; }
-            set { SetPropertyValue("FirstName", ref _firstname, value); }
-        }
+        //public string FirstName
+        //{
+        //    get { return _firstname; }
+        //    set { SetPropertyValue("FirstName", ref _firstname, value); }
+        //}
 
-        public string LastName
-        {
+        //public string LastName
+        //{
 
-            get { return _lastname; }
+        //    get { return _lastname; }
 
-            set { SetPropertyValue("LastName", ref _lastname, value); }
-        }
+        //    set { SetPropertyValue("LastName", ref _lastname, value); }
+        //}
 
-        public string MiddleName
-        {
-            get { return _middlename; }
-            set { SetPropertyValue("MiddleName", ref _middlename, value); }
-        }
+        //public string MiddleName
+        //{
+        //    get { return _middlename; }
+        //    set { SetPropertyValue("MiddleName", ref _middlename, value); }
+        //}
 
-        private DateTime _BirthDate;
+        //private DateTime _BirthDate;
 
-        public DateTime BirthDate
-        {
-            get { return _BirthDate;}
-            set { SetPropertyValue("BirthDate", ref _BirthDate, value); }
-        }
+        //public DateTime BirthDate
+        //{
+        //    get { return _BirthDate;}
+        //    set { SetPropertyValue("BirthDate", ref _BirthDate, value); }
+        //}
 
-        [ImageEditor(ListViewImageEditorCustomHeight = 75, DetailViewImageEditorFixedHeight = 150)]
-        public byte[] Photo { get; set; }
-        [Association("Customers-Address")]
-        public XPCollection<Address> Address
-        {
-            get
-            {
-                return GetCollection<Address>("Address");
-            }
-        }
+        //private string _phone;
+        //public  string Phone
+        //{
+        //    get { return _phone; }
+        //    set { SetPropertyValue("Phone", ref _phone, value); }
+        //}
 
-        [Association("Customers-LoanContracts")]
-        public XPCollection<LoanContracts> LoanContracts
-        {
-            get
-            {
-                return GetCollection<LoanContracts>("LoanContracts");
-            }
-        }
+        //private string _email;
+        //        public  string Email
+        //        {
+        //            get { return _email; }
+        //            set { SetPropertyValue("Email", ref _email, value); }
+        //        }
+
+        //[ImageEditor(ListViewImageEditorCustomHeight = 75, DetailViewImageEditorFixedHeight = 150)]
+        //public byte[] Photo { get; set; }
+        //[Association("Customers-Address")]
+        //public XPCollection<Address> Address
+        //{
+        //    get
+        //    {
+        //        return GetCollection<Address>("Address");
+        //    }
+        //}
+
+        //[Association("Customers-LoanContracts")]
+        //public XPCollection<LoanContracts> LoanContracts
+        //{
+        //    get
+        //    {
+        //        return GetCollection<LoanContracts>("LoanContracts");
+        //    }
+        //}
         public Customers(Session session)
             : base(session)
         {

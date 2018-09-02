@@ -16,29 +16,29 @@ namespace Sacco.Module.BusinessObjects
 {
     [DefaultClassOptions]
     
-    public class Staffs : XPObject
+    public class Staffs : Person
     {
-        private string _firstName;
-        private string _lastName;
-        private string _middleName;
+   //     private string _firstName;
+   //     private string _lastName;
+   //     private string _middleName;
 
-        public string FirstName
-        {
-            get { return _firstName; }
-            set { SetPropertyValue("FirstName", ref _firstName, value); }
-        }
+   //     public string FirstName
+   //     {
+   //         get { return _firstName; }
+   //         set { SetPropertyValue("FirstName", ref _firstName, value); }
+   //     }
 
-   public  string LastName
-        {
-            get { return _lastName;}
-            set { SetPropertyValue("LastName", ref _lastName, value); }
-        }
+   //public  string LastName
+   //     {
+   //         get { return _lastName;}
+   //         set { SetPropertyValue("LastName", ref _lastName, value); }
+   //     }
 
-        public string MiddleName
-        {
-            get { return _middleName; }
-            set { SetPropertyValue("MiddleName", ref _middleName, value); }
-        }
+   //     public string MiddleName
+   //     {
+   //         get { return _middleName; }
+   //         set { SetPropertyValue("MiddleName", ref _middleName, value); }
+   //     }
         public Staffs(Session session)
             : base(session)
         {
